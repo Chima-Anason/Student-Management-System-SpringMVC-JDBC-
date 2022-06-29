@@ -9,5 +9,7 @@ public interface StudentDAO {
 	List<Student> loadStudents();
 	
 	void saveStudent(Student student);
+	
+	Student getStudentById(int id);
 
 }

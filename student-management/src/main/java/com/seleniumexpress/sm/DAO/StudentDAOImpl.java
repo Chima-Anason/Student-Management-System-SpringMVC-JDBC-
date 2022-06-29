@@ -41,4 +41,14 @@ public class StudentDAOImpl implements StudentDAO {
 		
 	}
 
+	@Override
+	public Student getStudentById(int id) {
+		
+		String sql = "SELECT * FROM students WHERE id = ?";
+		
+		Student student = jdbcTemplate.queryForObject(sql, new StudentRowMapper() ,id);
+		
+		return student;
+	}
+
 }

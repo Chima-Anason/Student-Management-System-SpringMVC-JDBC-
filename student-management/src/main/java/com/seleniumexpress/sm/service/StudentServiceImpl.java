@@ -30,4 +30,12 @@ public class StudentServiceImpl implements StudentService {
 
 	}
 
+	@Override
+	public Student getStudentById(int id) {
+		
+		Student student = studentDAO.getStudentById(id);
+		
+		return student;
+	}
+
 }
