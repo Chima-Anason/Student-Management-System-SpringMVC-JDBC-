@@ -61,4 +61,14 @@ public class StudentDAOImpl implements StudentDAO {
 		
 	}
 
+	@Override
+	public void deleteStudent(int id) {
+		
+		String sql = "DELETE FROM students WHERE id = ?";
+		
+		jdbcTemplate.update(sql, id);
+		System.out.println("1 recored deleted....");
+		
+	}
+
 }
