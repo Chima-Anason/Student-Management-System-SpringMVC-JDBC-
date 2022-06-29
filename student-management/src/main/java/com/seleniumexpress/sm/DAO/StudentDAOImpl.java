@@ -51,4 +51,14 @@ public class StudentDAOImpl implements StudentDAO {
 		return student;
 	}
 
+	@Override
+	public void update(Student student) {
+		
+		String sql = "UPDATE STUDENTS SET name =?,mobile =?,country =? WHERE id =?";
+		
+		jdbcTemplate.update(sql, student.getName(),student.getMobile(),student.getCountry(),student.getId());
+		System.out.println("1 recored updated....");
+		
+	}
+
 }

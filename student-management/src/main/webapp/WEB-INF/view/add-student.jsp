@@ -14,6 +14,8 @@
 
 		<form:form action="save-student" modelAttribute="student" method="POST">
 
+			<form:hidden path="id"/>
+			
 			<label>Name : </label>
 			<form:input path="name" />
 			</br>

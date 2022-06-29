@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.seleniumexpress.sm.DAO.StudentDAO;
@@ -52,10 +54,37 @@ public class StudentController {
 		
 		System.out.println(student);
 		
-		//do a Service call to save the student
-		studentService.saveStudent(student);
+		//do a condition check
+		//if the user don't have an id then do an insert
+		//if the user have an id --> do an update
+		
+		if(student.getId() == 0) {
+			//insert a new record
+			studentService.saveStudent(student);
+		}else {
+			//do an update
+			studentService.update(student);
+		}
+		
 		
 		return "redirect:/showStudent";
+
+	}
+	
+	
+	
+	@GetMapping("/updateStudent")
+	private String updateStudent(@RequestParam("userId") int id,Model model) {
+		
+		//we should get the data object of a particular student
+		System.out.println("finding data for the student with id : " +id);
+		
+		Student theStudent = studentService.getStudentById(id);
+		System.out.println(theStudent);
+		
+		model.addAttribute("student", theStudent);
+		
+		return "add-student";
 
 	}
 
