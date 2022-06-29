@@ -12,6 +12,12 @@
 <h1 align="center"> SELENIUM EXPRESS</h1>
 
 	<div align="center">
+		<form action="/student-management/showAddStudent">
+
+			<input type="submit" value="ADD">
+
+		</form>
+
 		<table border="1">
 			<thead>
 				<tr>

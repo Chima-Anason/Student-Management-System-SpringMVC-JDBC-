@@ -3,9 +3,9 @@ package com.seleniumexpress.sm.api;
 public class Student {
 
 	private int id;
-	private String name = "Mr.X";
-	private Long mobile = 2333333L;
-	private String country = "india";
+	private String name;
+	private Long mobile;
+	private String country;
 	
 	
 	public int getId() {
