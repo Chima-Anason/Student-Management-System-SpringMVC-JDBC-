@@ -54,8 +54,10 @@ public class StudentController {
 	@GetMapping("/save-student")
 	private String saveStudent(Student student) {
 		
-		//write the logic to save the student data
 		System.out.println(student);
+		
+		//do a DAO call to save the student
+		studentDAO.saveStudent(student);
 		
 		return "student saved ....";
 
