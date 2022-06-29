@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.seleniumexpress.sm.DAO.StudentDAO;
 import com.seleniumexpress.sm.api.Student;
@@ -32,6 +33,31 @@ public class StudentController {
 		model.addAttribute("students", studentList);
 		
 		return "student-list";
+
+	}
+	
+	
+	
+	@GetMapping("/showAddStudent")
+	private String addStudent(Model model) {
+		
+		Student student = new Student();
+		
+		model.addAttribute("student", student);
+		
+		return "add-student";
+
+	}
+	
+	
+	@ResponseBody
+	@GetMapping("/save-student")
+	private String saveStudent(Student student) {
+		
+		//write the logic to save the student data
+		System.out.println(student);
+		
+		return "student saved ....";
 
 	}
 
