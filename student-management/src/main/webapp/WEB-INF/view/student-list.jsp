@@ -7,17 +7,17 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/my-style-sheet.css">
+<link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/my-style-sheets.css">
 
 </head>
-<body>
+<body class="myFont">
 
 <h1 align="center"> SELENIUM EXPRESS</h1>
 
 	<div align="center">
 		<form action="/student-management/showAddStudent">
 
-			<input type="submit" value="ADD">
+			<input class="myButton" type="submit" value="ADD">
 
 		</form>
 
@@ -44,7 +44,7 @@
 			</c:forEach>
 		</table>
 		
-		<img alt="fake students photo" src="/student-management/URLToReachResourcesFolder/images/student-image1.png">
+		<img alt="fake students photo" src="/student-management/URLToReachImagesFolder/student-image1.png">
 		
 	</div>
 

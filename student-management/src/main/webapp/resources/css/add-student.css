@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body{
+	
+	background-image: url("/student-management/URLToReachImagesFolder/background-image2.png")
+}
+
+
+label{
+	
+	color: white;
+}
