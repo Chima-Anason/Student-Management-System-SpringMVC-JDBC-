@@ -10,3 +10,8 @@ label{
 	
 	color: white;
 }
+
+form {
+	width: 300px;
+	text-align: left;
+} 

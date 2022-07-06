@@ -7,22 +7,27 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/my-style-sheets.css">
 
 </head>
-<body class="myFont">
+<body>
 
-<h1 align="center"> SELENIUM EXPRESS</h1>
+<div class="container">
+       <h1 align="center"> ANAGRACE TECH</h1>
 
-	<div align="center">
-		<form action="/student-management/showAddStudent">
 
-			<input class="myButton" type="submit" value="ADD">
 
-		</form>
+			<form action="/student-management/showAddStudent">
 
-		<table border="1">
-			<thead>
+				<input type="submit" value="ADD" class="btn btn-outline-success">
+
+			</form>
+			</br>
+
+
+		<table border="1" class="table">
+			<thead class="table-dark">
 				<tr>
 					<td>Id</td>
 					<td>Name</td>
@@ -43,9 +48,13 @@
 				</tr>
 			</c:forEach>
 		</table>
-		
-		<img alt="fake students photo" src="/student-management/URLToReachImagesFolder/student-image1.png">
-		
+
+		<div align="center">
+
+			<img alt="fake students photo" src="/student-management/URLToReachImagesFolder/student-image1.png">
+		</div>
+
+
 	</div>
 
 

@@ -7,32 +7,38 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/add-student.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/add-students.css">
 <link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/my-style-sheet.css">
+
 
 </head>
 <body>
 
-	<div align="center">
-		<h1>Add Student</h1>
+	<div align="center" class="container">
+		<h1 class="mb-3">Add Student</h1>
 
 		<form:form action="save-student" modelAttribute="student" method="POST">
 
-			<form:hidden path="id"/>
-			
-			<label>Name : </label>
-			<form:input path="name" />
-			</br>
+			<div class="mb-3">
+				<form:hidden path="id" />
 
-			<label>Mobile : </label>
-			<form:input path="mobile" />
-			</br>
+				<label class="form-label">Name : </label>
+				<form:input class="form-control" path="name" />
+				</br>
+				
+				<label class="form-label">Mobile : </label>
+				<form:input class="form-control" path="mobile" />
+				</br> 
+				
+				<label class="form-label">Country : </label>
+				<form:input class="form-control" path="country" />
+				</br>
 
-			<label>Country : </label>
-			<form:input path="country" />
-			</br>
+			</div>
 
-			<input type="submit" value="Submit">
+
+			<input type="submit" value="Submit" class="btn btn-primary">
 
 
 		</form:form>
