@@ -6,6 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="/student-management/URLToReachResourcesFolder/css/my-style-sheet.css">
+
 </head>
 <body>
 
@@ -40,6 +43,9 @@
 				</tr>
 			</c:forEach>
 		</table>
+		
+		<img alt="fake students photo" src="/student-management/URLToReachResourcesFolder/images/student-image1.png">
+		
 	</div>
 
 

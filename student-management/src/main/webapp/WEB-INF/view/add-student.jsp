@@ -10,7 +10,7 @@
 <body>
 
 	<div align="center">
-		<h3>Add Student</h3>
+		<h1>Add Student</h1>
 
 		<form:form action="save-student" modelAttribute="student" method="POST">
 
